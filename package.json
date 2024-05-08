@@ -1,0 +1,25 @@
+{
+  "name": "logo-mojo",
+  "version": "1.0.0",
+  "description": "Logo Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatalieClinton/Logo-Mojo.git"
+  },
+  "author": "Natalie Clinton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NatalieClinton/Logo-Mojo/issues"
+  },
+  "homepage": "https://github.com/NatalieClinton/Logo-Mojo#readme",
+  "dependencies": {
+    "inquirer": "^9.2.20"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
