@@ -6,12 +6,12 @@ import('inquirer').then(({ default: inquirer }) => {
     // Path to the examples folder
     const examplesFolderPath = path.join(__dirname, 'examples');
   
-    // Create the examples folder if it doesn't exist
+    // Creates the examples folder if it doesn't exist
     if (!fs.existsSync(examplesFolderPath)) {
       fs.mkdirSync(examplesFolderPath);
     }
   
-    // Create an inquirer prompt to collect user input
+    // Creates an inquirer prompt to collect user input
     inquirer
       .prompt([
         { name: 'text', message: 'Enter up to three characters for the text:' },
@@ -34,21 +34,21 @@ import('inquirer').then(({ default: inquirer }) => {
             break;
         }
   
-        // Set the color of the shape
+        // Sets the color of the shape
         shape.setColor(answers.shapeColor);
   
-        // Generate the SVG string
-        const svg = `<svg width="300" height="200">
+        // Generates the SVG string
+        const svg = `<svg width="600" height="400">
                       ${shape.render()}
                       <text x="150" y="100" fill="${answers.textColor}" text-anchor="middle">${answers.text}</text>
                     </svg>`;
   
-        // Write the SVG string to a file in the examples folder
+        // Writes the SVG string to a file in the examples folder
         const fileName = `logo_${Date.now()}.svg`;
         const filePath = path.join(examplesFolderPath, fileName);
         fs.writeFileSync(filePath, svg);
   
-        // Print a message indicating that the logo was generated
+        // Prints a message indicating that the logo was generated
         console.log(`Generated ${fileName}`);
       })
       .catch(err => {
