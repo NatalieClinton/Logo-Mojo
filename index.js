@@ -6,20 +6,24 @@ import('inquirer').then(({ default: inquirer }) => {
     // Path to the examples folder
     const examplesFolderPath = path.join(__dirname, 'examples');
   
-    // Creates the examples folder if it doesn't exist
-    if (!fs.existsSync(examplesFolderPath)) {
-      fs.mkdirSync(examplesFolderPath);
-    }
-  
+    const fontFamilies = [
+      { name: 'Arial', value: 'Arial' },
+      { name: 'Verdana', value: 'Verdana' },
+      { name: 'Helvetica', value: 'Helvetica' },
+      { name: 'Times New Roman', value: 'Times New Roman' }
+    ];
+
     // Creates an inquirer prompt to collect user input
     inquirer
       .prompt([
         { name: 'text', message: 'Enter up to three characters for the text:' },
         { name: 'textColor', message: 'Enter the text color:' },
+        { name: 'fontFamily', message: 'Choose a font family:', type: 'list', choices: fontFamilies },
         { name: 'shape', type: 'list', message: 'Choose a shape:', choices: ['Triangle', 'Circle', 'Square'] },
         { name: 'shapeColor', message: 'Enter the shape color:' },
       ])
       .then(answers => {
+
         // Based on the selected shape, create an instance of the corresponding class
         let shape;
         switch (answers.shape) {
@@ -36,12 +40,12 @@ import('inquirer').then(({ default: inquirer }) => {
   
         // Sets the color of the shape
         shape.setColor(answers.shapeColor);
-  
+
         // Generates the SVG string
         const svg = `<svg width="600" height="400">
-                      ${shape.render()}
-                      <text x="150" y="100" fill="${answers.textColor}" text-anchor="middle">${answers.text}</text>
-                    </svg>`;
+        ${shape.render()}
+        <text x="300" y="200" fill="${answers.textColor}" text-anchor="middle" font-family="${answers.fontFamily}" font-weight="bold">${answers.text}</text>
+        </svg>`;
   
         // Writes the SVG string to a file in the examples folder
         const fileName = `logo_${Date.now()}.svg`;
