@@ -1,42 +1,33 @@
-# Logo Mojo
-
-This command-line application allows you to create custom SVG logos by specifying text, text color, shape, and shape color. Follow the prompts to generate your logo.
+# Logo Generator
+This project is a simple command-line tool that generates logos in SVG format. It allows the user to choose a shape (Triangle, Circle, or Square), specify the shape's color, enter up to three characters for the logo text, choose a text color, and select a font family.
 
 ## Installation
-
-Clone the repository and run `npm install` to install the required dependencies.
+Clone this repository to your local machine.
+Run npm install to install the required dependencies.
 
 ## Usage
+Run the application using node index.js.
+Follow the prompts to enter the desired logo parameters.
+Once the logo is generated, a file will be saved in the examples folder.
 
-To run the application, use the command `node index.js` and follow the prompts to enter the text, text color, shape, and shape color for your logo.
-
-### Text Input
-- Enter up to three characters for the text of your logo.
-
-### Text Color
-- Enter a color keyword or a hexadecimal number for the text color.
-
-### Shape
-- Choose a shape from the following options: circle, triangle, square.
-
-### Shape Color
-- Enter a color keyword or a hexadecimal number for the shape color.
-
-Once you have entered input for all the prompts, the application will create an SVG file named `logo.svg` in the project directory. The command line will display "Generated logo.svg" to indicate that the file has been created.
+## Dependencies
+inquirer: Used for collecting user input through prompts.
+fs: Used for file system operations.
+path: Used for handling file paths.
+lib/shapes: Contains classes for Triangle, Circle, and Square shapes.
 
 ## Viewing the Logo
-
-To view the logo, open the `logo.svg` file in a web browser. The image will be displayed as a 300x200 pixel graphic that matches the criteria you entered.
+To view the logo, open the logo.svg file in a web browser. The image will be displayed as a 300x200 pixel graphic that matches the criteria you entered.
 
 ## Example
-
 Here is an example of how to generate a logo with the text "ABC", text color red, a circle shape, and shape color blue:
 
 1. Run `node index.js`.
 2. Enter "ABC" for the text.
 3. Enter "red" for the text color.
-4. Choose "circle" for the shape.
-5. Enter "blue" for the shape color.
-6. Open `logo.svg` in a web browser to view the generated logo.
+4. Choose "Arial" for the font family.
+5. Choose "circle" for the shape.
+6. Enter "blue" for the shape color.
+7. Open `logo_*timestamp*.svg` in a web browser to view the generated logo.
 
 Enjoy creating your custom logos!

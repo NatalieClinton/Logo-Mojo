@@ -17,10 +17,10 @@ import('inquirer').then(({ default: inquirer }) => {
     inquirer
       .prompt([
         { name: 'text', message: 'Enter up to three characters for the text:' },
-        { name: 'textColor', message: 'Enter the text color:' },
+        { name: 'textColor', message: 'Enter the text color (color keyword or hexadecimal number):' },
         { name: 'fontFamily', message: 'Choose a font family:', type: 'list', choices: fontFamilies },
         { name: 'shape', type: 'list', message: 'Choose a shape:', choices: ['Triangle', 'Circle', 'Square'] },
-        { name: 'shapeColor', message: 'Enter the shape color:' },
+        { name: 'shapeColor', message: 'Enter the shape color (color keyword or hexadecimal number):' },
       ])
       .then(answers => {
 
@@ -42,9 +42,9 @@ import('inquirer').then(({ default: inquirer }) => {
         shape.setColor(answers.shapeColor);
 
         // Generates the SVG string
-        const svg = `<svg width="600" height="400">
+        const svg = `<svg width="300" height="200">
         ${shape.render()}
-        <text x="300" y="200" fill="${answers.textColor}" text-anchor="middle" font-family="${answers.fontFamily}" font-weight="bold">${answers.text}</text>
+        <text x="150" y="100" fill="${answers.textColor}" text-anchor="middle" font-family="${answers.fontFamily}" font-weight="bold">${answers.text}</text>
         </svg>`;
   
         // Writes the SVG string to a file in the examples folder
