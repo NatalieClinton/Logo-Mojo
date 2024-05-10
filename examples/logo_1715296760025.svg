@@ -1,4 +1,0 @@
-<svg width="600" height="400">
-        <polygon points="300, 50 450, 200 150, 200" fill="BLACK" />
-        <text x="100" y="100" fill="GREEN" text-anchor="middle" font-family="Arial" font-weight="bold">PLS</text>
-        </svg>

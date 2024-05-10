@@ -1,4 +1,0 @@
-<svg width="600" height="400">
-        <polygon points="400,50 300,200 200,50" fill="PINK" />
-        <text x="300" y="200" fill="GREEN" text-anchor="middle" font-family="Times New Roman" font-weight="bold">QQQ</text>
-        </svg>

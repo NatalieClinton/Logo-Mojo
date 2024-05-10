@@ -1,4 +1,0 @@
-<svg width="600" height="400">
-        <rect x="200" y="100" width="200" height="200" fill="PINK" />
-        <text x="100" y="100" fill="BLUE" text-anchor="middle" font-family="Arial" font-weight="bold">BBB</text>
-        </svg>
