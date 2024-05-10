@@ -17,10 +17,10 @@ path: Used for handling file paths.
 lib/shapes: Contains classes for Triangle, Circle, and Square shapes.
 
 ## Viewing the Logo
-To view the logo, open the logo.svg file in a web browser. The image will be displayed as a 300x200 pixel graphic that matches the criteria you entered.
+To view the logo, open the `logo_*timestamp*.svg` file from the examples folder in a web browser or on VS Code with the SVG extension. The image will be displayed as a 300x200 pixel graphic that matches the criteria you entered.
 
 ## Example
-Here is an example of how to generate a logo with the text "ABC", text color red, a circle shape, and shape color blue:
+Here is an example of how to generate a logo with the text "ABC", text color red, Arial font, a circle shape, and shape color blue:
 
 1. Run `node index.js`.
 2. Enter "ABC" for the text.
@@ -30,4 +30,13 @@ Here is an example of how to generate a logo with the text "ABC", text color red
 6. Enter "blue" for the shape color.
 7. Open `logo_*timestamp*.svg` in a web browser to view the generated logo.
 
-Enjoy creating your custom logos!
+## Tests
+
+To run tests, run the following command: npm test
+
+## Questions
+
+If you have any questions about the project, feel free to reach out to me via [GitHub](https://github.com/NatalieClinton) or email me at natalie.clinton@hotmail.com.
+
+## Link to Video 
+https://drive.google.com/file/d/1RKonnBppUDfv6YD-OdWfkN0026rUTI_I/view 
